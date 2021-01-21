@@ -12,6 +12,9 @@
 class Stack{
 	public:
 		Stack();
+		isEmpty();
+		push(int element);
+		pop();
 	private:
 		unsigned long stack_size;
 };

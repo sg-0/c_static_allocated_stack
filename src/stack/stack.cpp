@@ -14,3 +14,15 @@
 Stack::Stack(){
 	stack_size = 0;
 }
+
+Stack::isEmpty(){
+	return stack_size == 0;
+}
+
+Stack::push(int element){
+	stack_size ++;
+}
+
+Stack::pop(){
+	stack_size --;
+}
