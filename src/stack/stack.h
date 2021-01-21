@@ -11,10 +11,13 @@
 
 class Stack{
 	public:
-		Stack();
+		Stack(unsigned long max_size);
 		isEmpty();
-		push(int element);
+		isFull();
+		push(long element);
 		pop();
 	private:
-		unsigned long stack_size;
+		unsigned long max_size;
+		unsigned long current_size;
+		long elements[];
 };
