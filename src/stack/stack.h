@@ -8,3 +8,10 @@
  * @copyright Copyright (c) 2021
  * 
  *****************************************************************************/
+
+class Stack{
+	public:
+		Stack();
+	private:
+		unsigned long stack_size;
+};

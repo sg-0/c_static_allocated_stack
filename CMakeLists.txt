@@ -10,7 +10,7 @@
 
 cmake_minimum_required( VERSION 3.10 FATAL_ERROR )
 set(PROJECT_NAME stack)
-project( ${PROJECT_NAME} C CXX ASM )
+project( ${PROJECT_NAME} CXX)
 
 set(CMAKE_C_STANDARD 99)
 set(CMAKE_CXX_STANDARD 11)

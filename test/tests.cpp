@@ -10,5 +10,11 @@
  *****************************************************************************/
 
 #include <gtest/gtest.h>
-#include "stack.c"
 #include "stack.h"
+
+Stack *myStack;
+
+TEST(StackSetupTest, StackCreation) { 
+	myStack = new Stack();
+	EXPECT_FALSE(myStack == NULL);
+}
