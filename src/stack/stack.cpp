@@ -11,10 +11,13 @@
 
 #include "stack.h"
 
+#define MAX(a,b) ((a > b) ? (a) : (b))
+#define MAX_UNSIGNED_LONG 0XFFFFFFFF
+
 Stack::Stack(unsigned long max_size){
-	this->max_size = max_size;
+	this->max_size = MAX(max_size, MAX_UNSIGNED_LONG);
 	this->current_size = 0;
-	elements[max_size] = {0};
+	elements[this->max_size] = {0};
 }
 
 Stack::isEmpty(){
@@ -23,6 +26,14 @@ Stack::isEmpty(){
 
 Stack::isFull(){
 	return (this->max_size == this->current_size);
+}
+
+Stack::getCurrentSize(){
+	return (this->current_size);
+}
+
+Stack::getMaxSize(){
+	return (this->max_size);
 }
 
 Stack::push(long element){
@@ -40,5 +51,5 @@ Stack::pop(){
 	else
 		this->current_size--;
 
-	return this->elements[this->current_size];;
+	return (this->elements[this->current_size]);
 }

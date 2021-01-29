@@ -69,3 +69,8 @@ TEST(isFull, expectFullStack){
 	EXPECT_EQ(testStack->pop(), 0);
 	EXPECT_EQ(testStack->pop(), 0);
 }
+
+// TEST(stackOverFlow, expectMaxStackSizeMaxLong){
+// 	Stack *overFlowStack = new Stack(0XFFFFFFF);
+// 	EXPECT_EQ(overFlowStack->getMaxSize(), 0XFFFFFFF);
+// }

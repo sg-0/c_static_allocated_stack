@@ -1,5 +1,5 @@
 /*****************************************************************************
- * @file stack.h
+ * @file queue.h
  * @author sg-0
  * @brief 
  * @version 0.1
@@ -9,17 +9,20 @@
  * 
  *****************************************************************************/
 
-class Stack{
+#define QUEUE_MAX_SIZE 256u
+
+class Queue{
 	public:
-		Stack(unsigned long max_size);
+		Queue();
 		isEmpty();
 		isFull();
-		getCurrentSize();
+		getSize();
 		getMaxSize();
-		push(long element);
-		pop();
+		enqueue(long element);
+		dequeue();
 	private:
-		unsigned long max_size;
 		unsigned long current_size;
-		long elements[];
+		unsigned long head;
+		unsigned long tail;
+		long elements[QUEUE_MAX_SIZE];
 };
